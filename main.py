@@ -1,8 +1,5 @@
-from os import startfile
 from tkinter import *
 import random
-
-
 
 '''
     COMPUTER            USER            WINNER
@@ -27,8 +24,8 @@ def game(event):
     print(userSelect, computerSelect)
     try:
         if (userSelect=='Paper' and computerSelect=='Paper') or (userSelect=='Rock' and computerSelect=='Rock') or (userSelect=='Scissor' and computerSelect=='Scissor') :
-            userImage = PhotoImage(file=f"{str(userSelect)}.png")
-            computerImage = PhotoImage(file=f"{str(computerSelect)}.png")
+            userImage = PhotoImage(file=f"{str(userSelect.lower())}.png")
+            computerImage = PhotoImage(file=f"{str(computerSelect.lower())}.png")
             
             dImgLabel.configure(image=userImage)
             dImgLabel.image = userImage
@@ -40,8 +37,8 @@ def game(event):
             winnerLabel.configure(text="Game Draw")
             game()            
         elif (userSelect=='Paper'and computerSelect=="Rock")or(userSelect=="Rock"and computerSelect=="Scissor")or(userSelect=="Scissor" and computerSelect=="Paper"):
-            userImage = PhotoImage(file=f"{str(userSelect)}.png")
-            computerImage = PhotoImage(file=f"{str(computerSelect)}.png")
+            userImage = PhotoImage(file=f"{str(userSelect.lower())}.png")
+            computerImage = PhotoImage(file=f"{str(computerSelect.lower())}.png")
             
             dImgLabel.configure(image=userImage)
             dImgLabel.image = userImage
@@ -53,8 +50,8 @@ def game(event):
             winnerLabel.configure(text="You Win")
             game()  
         else:
-            userImage = PhotoImage(file=f"{str(userSelect)}.png")
-            computerImage = PhotoImage(file=f"{str(computerSelect)}.png")
+            userImage = PhotoImage(file=f"{str(userSelect.lower())}.png")
+            computerImage = PhotoImage(file=f"{str(computerSelect.lower())}.png")
             
             dImgLabel.configure(image=userImage)
             dImgLabel.image = userImage
